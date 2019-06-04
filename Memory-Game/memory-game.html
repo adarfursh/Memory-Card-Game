@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Your page title-->
+    <title>Wu Tang Memory Game</title>
+
+    <style>
+        body {
+            background: url(http://inn.spb.ru/images/800/DSC100805569.jpg);
+            background-size: 120% 120%;
+
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1024px;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        .card {
+            margin: 1em;
+            background: url(https://images.sk-static.com/images/media/profile_images/artists/283704/huge_avatar);
+            background-size: contain;
+            height: 11em;
+            width: 9rem;
+            border: 1px solid black;
+            border-radius: 10%;
+            /* background-image: url(https://acclaimmag.com/wp-content/uploads/2015/01/ODB.jpg); */
+
+        }
+
+        /* .flipped { */
+            /* margin: 1em;
+            background-size: contain;
+            height: 11em;
+            width: 9rem;
+            border: 1px solid black;
+            border-radius: 10%;
+            background-image: url(https://acclaimmag.com/wp-content/uploads/2015/01/ODB.jpg);
+        } */
+
+
+        /* .footer {
+            background: #bdc3c7;
+            color: black;
+            bottom: 0em;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            height: 3%;
+        } */
+    </style>
+
+
+</head>
+
+<body>
+    <audio src="wu.mp3" id="my_audio" loop="loop"></audio>
+    <audio src="wu2.mp3" id="my_audio2" loop="loop"></audio>
+
+
+
+
+    <div class="container">
+        <div class="row myrow">
+            <div class="col-xs-6 col-md-3">
+                <div class="first card">
+                       <img class="flipped" >
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="first card">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="card">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="card">
+                </div>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col-xs-6 col-md-3">
+                <div class="card">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="card">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="card">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="card">
+                </div>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col-xs-6 col-md-3">
+                <div class="card">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="card">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="card">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="card">
+                </div>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col-xs-11">
+                <button type="button">Change theme (Explicit)</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="footer">Made by Adar Furshpan</div>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+    <script>
+
+
+        // Music plays after page is loaded
+        window.onload = function () {
+            document.getElementById("my_audio").play();
+        }
+
+        $('.first').data("background-image", 'url(https://acclaimmag.com/wp-content/uploads/2015/01/ODB.jpg)');
+
+        // changes card after click
+
+        $('.card').click(function () {
+            
+            // $(this).css('display', 'none');
+            $(this).css('background-image. ')
+        });
+
+
+        //change theme
+        $('button').click(function () {
+            $('body').css("background-image", "url(http://inn.spb.ru/images/800/DSC100805560.jpg)");
+            $('.card').css("background-image", "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCQsDFu-hy5MkbZEjTwb6_iVYqwZOnhKYmr8Xz63klgg-a8lKB)");
+            document.getElementById("my_audio").pause();
+            document.getElementById("my_audio2").play();
+            $('button').css("display" , "none");
+
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
