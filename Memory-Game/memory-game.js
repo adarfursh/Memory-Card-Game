@@ -1,15 +1,14 @@
-
 var contain = document.getElementById("container");
 var clickedIdArray = [];
 var matchingPairs = 0;
 
 // Music plays once page is loaded
-window.onload = function () {
+window.onload = function() {
     document.getElementById("my_audio").play();
 }
 
 //change theme
-$('#themeButton').click(function () {
+$('#themeButton').click(function() {
     document.getElementById("my_audio").pause();
     document.getElementById("my_audio2").play();
     $('button').css("display", "none");
@@ -49,15 +48,15 @@ $(document).ready(function createCards() {
 
 
 function flipBack() {
-    clickedIdArray.forEach(function (card) {
+    clickedIdArray.forEach(function(card) {
         card.style.cssText = '';
     })
 }
+
 function flipCard(e) {
     if ($(this).hasClass('flipped') || (clickedIdArray.length === 2)) {
         // do nothing
-    }
-    else {
+    } else {
         if (clickedIdArray.length < 2) {
             $(this).addClass("flipped");
             $(this).css("background", "url(" + imgs[e.target.id] + ")");
@@ -74,16 +73,15 @@ function flipCard(e) {
             console.log('cards are the same');
             matchingPairs++;
             clickedIdArray = [];
-            if (matchingPairs === 1) {
+            if (matchingPairs === 6) {
                 document.getElementById('my_audio3').play();
                 gameOver();
 
             }
-        }
-        else {
+        } else {
             console.log('cards are not the same');
 
-            setTimeout(function () {
+            setTimeout(function() {
                 //alert(clickedIdArray.length);
                 clickedIdArray[0].style.cssText = '';
                 clickedIdArray[1].style.cssText = '';
@@ -116,12 +114,3 @@ var imgs = ['https://acclaimmag.com/wp-content/uploads/2015/01/ODB.jpg',
     'https://i.ytimg.com/vi/DYhW7vHaoJQ/maxresdefault.jpg',
 
 ];
-
-
-
-
-
-
-
-
-
