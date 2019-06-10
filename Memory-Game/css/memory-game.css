@@ -1,0 +1,61 @@
+body {
+    background: url(http://inn.spb.ru/images/800/DSC100805569.jpg);
+    background-size: 110% 110%;
+}
+
+#container {
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+header {
+    display: inline;
+}
+
+.card {
+    margin: 1em;
+    height: 11em;
+    width: 9rem;
+    border: 3px solid black;
+    border-radius: 10%;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmt_9pHitHVWHrvlQoITNYqZ5nH_OmR2cnr0KbyuL6VZc47ZqBGQ);
+    background-size: 100% 100%;
+    display: inline-block;
+    opacity: 0.9;
+}
+
+.card:active {
+    transform: rotateZ(180deg);
+    transition: 0.35s;
+}
+
+button,
+input {
+    width: 100%;
+    background: black;
+    color: silver;
+}
+
+.my-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contents {
+    height: 30vh;
+    width: 30em;
+    background: url(https://www.merchandisingplaza.com.au/46820/3/T-shirts-Ol--Dirty-Bastard-OL--DIRTY-BASTARD-RIP-ODB-Graphic-Black-Tee-Shirt-l.jpg);
+    background-size: 100% 100%;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 4px;
+    color: silver;
+}
